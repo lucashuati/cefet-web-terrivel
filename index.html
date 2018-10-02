@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Terrivel Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Terrivel Form</h2>
+  <form action="http://terrivel.herokuapp.com/monster" method="GET" class="form-terrivel">
+    <div class="form-group">
+      <label for="email">Número de Pedras:</label>
+      <input required min="0" type="number" class="form-control" id="num_pedras" placeholder="Coloque o número de pedras" name="num_pedras">
+    </div>
+    <div class="form-group">
+      <label for="tam_pedras">Tamanho das pedras:</label>
+      <input required type="number" min="1" max="7" step="0.5" value="3" class="form-control" id="tam_pedras" name="tam_pedras">
+    </div>
+    <div class="form-group">
+        <label for="nome">Nome do monstro:</label>
+        <input required type="text" class="form-control" pattern="[a-zA-Z]*" id="nome" name="nome">
+    </div>
+    <div class="form-group">
+        <label for="corCeu1">Cor do céu 1:</label>
+        <input type="color" class="form-control" id="corCeu1" name="corCeu1">
+    </div>
+    <div class="form-group">
+        <label for="corCeu2">Cor do céu 2:</label>
+        <input type="color" class="form-control" id="corCeu2" name="corCeu2">
+    </div>
+    <div class="form-group">
+        <label for="tipo_pedras">Tipo de pedra:</label>
+        <select name="tipo_pedras" id="tipo_pedras">
+            <option value="marroada">Marroada</option>
+            <option value="ametista">Ametista</option>
+            <option value="topazio">Topazio</option>
+            <option value="espinela">Espinela</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="sim">Sim</label>
+        <input type="radio" name="tipo_pedras_sortidas" id="sim" value="sim">
+        <label for="nao">Não</label>
+        <input type="radio" name="tipo_pedras_sortidas" id="nao" value="não">
+    </div>
+    <button type="reset" class="btn btn-default">Cancelar</button>
+    <button type="submit" id="post" class="btn btn-default">Enviar - POST</button>
+    <button type="submit" id="get" class="btn btn-default">Enviar - GET</button>
+  </form>
+</div>
+
+</body>
+</html>
